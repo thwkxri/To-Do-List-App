@@ -103,7 +103,7 @@ h1 {
 .todos__time-text {
   position: absolute;  
   top: 100%;   
-  padding-top: 5px;
+  padding-top: 10px;
   font-size: 13px;
   color: #333;
 }
@@ -131,4 +131,40 @@ span {
   font-size: 15px;
   right: 10px;
   bottom: 10px;
+}
+
+@media (max-width: 650px) {
+  .todo__add-task input {
+    width: 350px;
+    padding-right: 90px;
+    font-size: 18px;
+  }
+  
+  .todo__add-task button {
+    width: 70px;
+  }
+
+  .todos__task p {
+    width: 285px;
+    overflow-wrap: break-word;     
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 400px) {
+  .todo__add-task input {
+    width: 300px;
+    padding-right: 85px;
+    font-size: 18px;
+  }
+  
+  .todo__add-task button {
+    width: 60px;
+  }
+
+  .todos__task p {
+    width: 230px;
+    overflow-wrap: break-word;     
+    word-break: break-all;
+  }
 }
