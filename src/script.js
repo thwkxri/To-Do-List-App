@@ -66,7 +66,7 @@ function addTask(task, time) {
   saveTasks(); // save new tasks list
 }
 
-//init - loading taska from localStorage
+//init - loading tasks from localStorage
 loadTasks();
 updateTodosDisplay();
 
@@ -75,7 +75,7 @@ addTaskBtn.addEventListener('click', () => {
   const currentTime = new Date().toLocaleString();
 
   if (task !== '' && taskCount < 20) {
-    addTask(task, currentTime); // use new function for add new tasks
+    addTask(task, currentTime); // use new function for adding new tasks
     taskInput.value = '';
   } else if (taskCount >= 20) {
     maxCountMessage.style.display = 'block';
