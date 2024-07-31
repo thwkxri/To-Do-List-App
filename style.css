@@ -74,7 +74,7 @@ h1 {
   transition: transform 80ms ease-in-out;
 }
 
-.todos {
+.todo__todos {
   position: relative;
   display: none;
   background: #fff;

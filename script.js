@@ -1,6 +1,6 @@
 const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTaskBtn');
-const todosList = document.querySelector('.todos');
+const todosList = document.querySelector('.todo__todos');
 const maxCountMessage = document.getElementById('maxCountMsg');
 
 let taskCount = 0;
@@ -66,7 +66,7 @@ function addTask(task, time) {
   saveTasks(); // save new tasks list
 }
 
-//init - loading taska from localStorage
+//init - loading tasks from localStorage
 loadTasks();
 updateTodosDisplay();
 
