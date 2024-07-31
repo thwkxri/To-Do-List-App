@@ -74,10 +74,10 @@ addTaskBtn.addEventListener('click', () => {
   const task = taskInput.value.trim();
   const currentTime = new Date().toLocaleString();
 
-  if (task !== '' && taskCount < 3) {
+  if (task !== '' && taskCount < 20) {
     addTask(task, currentTime); // use new function for add new tasks
     taskInput.value = '';
-  } else if (taskCount >= 3) {
+  } else if (taskCount >= 20) {
     maxCountMessage.style.display = 'block';
   }
 });
