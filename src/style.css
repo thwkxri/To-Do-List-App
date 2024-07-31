@@ -1,0 +1,134 @@
+:root {
+  --bg-color: #438BF2;
+  --font: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  font-family: var(--font);
+}
+
+.todo {
+  padding-top: 50px;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.todo__add-task {
+  position: relative;
+}
+
+.todo__add-task input {
+  width: 500px;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 100px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-family: var(--font);
+}
+
+.todo__add-task input::placeholder {
+  color: #BDBDBD;
+}
+
+.todo__add-task input:focus {
+  outline: none;
+}
+
+.todo__add-task button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  background: var(--bg-color);
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+.todo__add-task button:active {
+  transform: translateY(-50%) scale(0.95);
+  transition: transform 80ms ease-in-out;
+}
+
+.todos {
+  position: relative;
+  display: none;
+  background: #fff;
+  margin-top: 50px;
+  text-align: left;
+  padding: 30px 15px 15px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.todos__task {
+  display: flex;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  position: relative;
+  font-size: 18px;
+}
+
+.todos__task p {
+  width: 425px;
+  overflow-wrap: break-word;     
+  word-break: break-all;
+}
+
+.todos__time-text {
+  position: absolute;  
+  top: 100%;   
+  padding-top: 5px;
+  font-size: 13px;
+  color: #333;
+}
+
+.todos__task button {
+  cursor: pointer;
+  background: url('assets/icons/trash.svg') no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  border: none;
+}
+
+.todos__task button:active {
+  transform: scale(0.95);
+  transition: transform 80ms ease-in-out;
+}
+
+span {
+  display: none;
+  position: absolute;
+  color: red;
+  font-size: 15px;
+  right: 10px;
+  bottom: 10px;
+}
