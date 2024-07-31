@@ -1,6 +1,6 @@
 const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTaskBtn');
-const todosList = document.querySelector('.todos');
+const todosList = document.querySelector('.todo__todos');
 const maxCountMessage = document.getElementById('maxCountMsg');
 
 let taskCount = 0;
@@ -75,7 +75,7 @@ addTaskBtn.addEventListener('click', () => {
   const currentTime = new Date().toLocaleString();
 
   if (task !== '' && taskCount < 20) {
-    addTask(task, currentTime); // use new function for adding new tasks
+    addTask(task, currentTime); // use new function for add new tasks
     taskInput.value = '';
   } else if (taskCount >= 20) {
     maxCountMessage.style.display = 'block';
